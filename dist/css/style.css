@@ -1,0 +1,28 @@
+body {
+    background-color: beige;
+}
+
+.wheel {
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+    /* background-color: aqua; */
+}
+
+.pointer {
+    width: 5px;
+    height: 50px;
+    background-color: greenyellow;
+    position: absolute;
+    left: 205px;
+    top: -15px;
+    border-radius: 50%;
+}
+
+.pointerTransition {
+    transition: all 1s ease-in-out;
+}
+
+.spin-btn {
+    margin-top: 100px;
+}
