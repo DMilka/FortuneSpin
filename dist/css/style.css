@@ -2,14 +2,14 @@ body {
     background-color: beige;
 }
 
-.wheel {
+.wheel_box__wheel {
     width: 400px;
     height: 400px;
     margin-top: 20px;
     /* background-color: aqua; */
 }
 
-.pointer {
+.wheel_box__pointer {
     width: 5px;
     height: 50px;
     background-color: greenyellow;
@@ -20,9 +20,33 @@ body {
 }
 
 .pointerTransition {
-    transition: all 1s ease-in-out;
+    transition: all 3s ease-in-out;
 }
 
-.spin-btn {
+.wheel_box__spin-btn {
     margin-top: 100px;
 }
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.split_screen {
+    display: block;
+    margin: 30px;
+    background-color: aquamarine;
+    width: calc(50% - 30px);
+    height: calc(50% - 60px);
+}
+
+.split_screen:first-child {
+    margin-right: 0px;
+    border-right: 3px solid #000;
+}
+
+.split_screen:last-child {
+    margin-left: 0px;
+}
+
+.stats
