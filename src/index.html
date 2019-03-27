@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Raleway:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -13,17 +16,17 @@
         <section class="stats">
             <div class="stats__box">
                 <p class="stats__nickname">Razor</p>
-                <img src="img/Giraffe.jpg" alt="avatar">
+                <img src="img/Giraffe.jpg" alt="avatar" class="stats__avatar">
                 <p class="stats__points">256911</p>
             </div>
             <div class="stats__box">
                 <p class="stats__nickname">Dexan</p>
-                <img src="img/Lion.jpg" alt="avatar">
+                <img src="img/Lion.jpg" alt="avatar" class="stats__avatar">
                 <p class="stats__points">256911</p>
             </div>
             <div class="stats__box">
                 <p class="stats__nickname">Bartolomelo</p>
-                <img src="img/Elephant.jpg" alt="avatar">
+                <img src="img/Elephant.jpg" alt="avatar" class="stats__avatar">
                 <p class="stats__points">256911</p>
             </div>
         </section>
@@ -31,19 +34,42 @@
         <section class="wheel_box">
             <div class="wheel_box__container">
                 <div class="wheel_box__pointer"></div>
-                <img src="img/Wheel.png" alt="wheel" class="wheel_box__wheel">
+                <img src="img/Wheel.png" alt="wheel" class="wheel_box__wheel" data-last-spin="0">
             </div>
 
-            <button class="wheel_box___spin-btn">Zakręć</button>
+            <button class="wheel_box___spin-btn">ZAKRĘĆ</button>
         </section>
 
 
     </div>
     <div class="split_screen">
         <section class="answers">
-            <p class="answers__answer">
-                <span class="answers__num">1.</span>
-            </p>
+            <div class="answers__answer">
+                <div class="answers__num">1.</div>
+                <div class="answers__password">
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                    <div class="letter">D</div>
+                </div>
+
+            </div>
             <p class="answers__answer">
                 <span class="answers__num">2.</span>
             </p>
@@ -54,23 +80,16 @@
 
         <section class="letters_box">
             <div class="letters_box__buttons">
-                <button class="letters_box__buttons-btn">Consonants</button>
-                <button class="letters_box__buttons-btn">Vowel</button>
+                <button class="letters_box__buttons-btn btn-active" id="consonantBtn">Spółgłoski</button>
+                <button class="letters_box__buttons-btn" id="vowelBtn">Samogłoski</button>
             </div>
-            <p class="letters_box_cost">300</p>
-            <div class="letters_box__letters">
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
-                <button class="letters_box__letter">B</button>
+            <p class="letters_box_cost hidden">Cena: 300</p>
+            <div class="letters_box__letters" id="consonants">
+
+            </div>
+
+            <div class="letters_box__letters hidden" id="vowel">
+
             </div>
         </section>
     </div>
