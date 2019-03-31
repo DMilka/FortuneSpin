@@ -27,5 +27,6 @@ export const minimalizeRotation = async spinToSave => {
   await setTimeout(() => {
     wheel.classList.remove('pointerTransition');
     wheel.style.transform = `rotate(-${spinToSave}deg)`;
-}, 3500);
+  }, 3500);
 }
+

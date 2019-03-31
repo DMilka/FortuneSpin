@@ -9,12 +9,9 @@ body {
 .wheel_box__wheel {
     width: 400px;
     height: 400px;
-    margin-top: 20px;
     /* background-color: aqua; */
     display: block;
-    margin:  50px auto 50px auto;
-
-    
+    margin:  30px auto;
 }
 
 .wheel_box__pointer {
@@ -22,9 +19,10 @@ body {
     height: 50px;
     background-color: greenyellow;
     border-radius: 50%;
-    margin: 0 auto;
+    display: block;
     position: relative;
-    top: 70px;
+    left: calc(50% - 2.5px);
+    top: -460px;
 }
 
 .pointerTransition {
@@ -55,14 +53,14 @@ main {
 .stats {
     width: calc(100% - 20px);
     margin: 5px;
-    height: 250px;
+    height: 225px;
     display: flex;
     justify-content: center;
 }
 
 .stats__avatar {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
@@ -95,7 +93,7 @@ main {
 
 .wheel_box___spin-btn {
     display: block;
-    margin: 50px auto;
+    margin:0 auto;
     width: 200px;
     height: 50px;
     border: 0;
@@ -139,6 +137,14 @@ main {
     min-width: 20px;
     height: 40px;
     border-bottom: 2px solid #000;
+    margin-right:  4px;
+    text-transform: uppercase;
+}
+
+.letter__space {
+    width: 30px;
+    min-width: 20px;
+    height: 40px;
     margin-right:  4px;
     text-transform: uppercase;
 }
@@ -208,7 +214,60 @@ button:hover {
     transform: translateY(4px);
 }
 
+button:disabled {
+    background-color: aliceblue;
+}
+
 .hidden {
     display: none;
 
+}
+
+.initial {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    background: bisque;
+}
+
+.initial__form {
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    background: #FFFAE2;
+    padding: 30px;
+    box-sizing: border-box;
+    /* border: 1px solid #393E41; */
+    webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.initial__form--input {
+    width: 80%;
+    margin: 10%;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 1.4rem;
+    font-family: 'Bangers', cursive;
+}
+
+.initial__form--btn {
+    width: 50%;
+    margin: 10% 25%;
+    height: 40px;
+    border: 0;
+    background: #E5E059;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-family: 'Bangers', cursive;
+}
+
+.active_player {
+    webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
 }

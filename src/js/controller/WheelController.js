@@ -1,4 +1,4 @@
-import Wheel from  '../model/Wheel';
+import Wheel from '../model/Wheel';
 import * as WheelView from '../view/WheelView';
 import { elements } from '../DOMelements';
 
@@ -9,11 +9,11 @@ export default class WheelController {
     this.wheelModel = new Wheel();
   }
 
-  async spinWheel() {
-    elements.spinWheelBtn.addEventListener('click', () => {
+  spinWheel() {
+
       const lastSpin = WheelView.getLastSpinValue();
 
-      const rotationSpinValue = this.wheelModel.randomSpinValue();
+      const rotationSpinValue =  this.wheelModel.randomSpinValue();
 
       const actualSpin = rotationSpinValue + lastSpin;
 
@@ -25,9 +25,14 @@ export default class WheelController {
 
       const calculatedPrizeIndex = Math.ceil((calculatedMinSpinValue / 22.5 ) -1);
 
-      this.reward = this.wheelModel.getReward(calculatedPrizeIndex);
+
 
       WheelView.minimalizeRotation(calculatedMinSpinValue);
-    })
+
+      this.reward = this.wheelModel.getReward(calculatedPrizeIndex);
+      console.log(this.reward);
+
+
   }
+
 }

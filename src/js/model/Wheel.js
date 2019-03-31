@@ -104,10 +104,4 @@ export default class Wheel {
   getReward(index) {
     return this.prizes[index];
   }
-
-
-
-
-
-
 }
