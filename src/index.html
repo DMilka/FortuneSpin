@@ -66,18 +66,37 @@
             <div class="letters_box__buttons">
                 <button class="letters_box__buttons-btn btn-active" id="consonantBtn">Spółgłoski</button>
                 <button class="letters_box__buttons-btn" id="vowelBtn">Samogłoski</button>
+                <button class="letters_box__buttons-btn" id="passwordBtn">Podaj hasła</button>
             </div>
             <p class="letters_box_cost hidden">Cena: 300</p>
-            <div class="letters_box__letters" id="consonants">
+            <div class="letters_box__letters " id="consonants">
 
             </div>
 
             <div class="letters_box__letters hidden" id="vowel">
 
             </div>
+
+            <div class="password hidden">
+                <form id="password__form">
+                    <input type="text" id="pass1" class="password__input" placeholder="Hasło #1" style="text-transform:uppercase">
+                    <input type="text" id="pass2" class="password__input" placeholder="Hasło #2" style="text-transform:uppercase">
+                    <input type="text" id="pass3" class="password__input" placeholder="Hasło #3" style="text-transform:uppercase">
+                    <button type="submit" class="letters_box__buttons-btn" id="passwordCheckBtn">Sprawdź!</button>
+                </form>
+            </div>
+
+
+
         </section>
     </div>
 </main>
+
+<section class="ready_screen">
+    <div class="ready_screen__btn" id="ready_timer">5.</div>
+    <button class="ready_screen__btn hidden" id="ready_btn">Gotowy!</button>
+</section>
+
 
 
 <section class="initial">

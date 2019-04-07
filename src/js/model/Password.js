@@ -10,7 +10,7 @@ export default class Password {
 
   async getPasswords() {
     try {
-        const res = await axios(`..https://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=noun&excludePartOfSpeech=interjection%2Cabbreviation%2C%20affix%2Cauxiliary-verb%2Cfamily-name%2Cgiven-name%2Cidiom%2Cimperative&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=10&maxLength=15&limit=12&api_key=${apiWordKey}`);
+        const res = await axios(`---https://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=noun&excludePartOfSpeech=interjection%2Cabbreviation%2C%20affix%2Cauxiliary-verb%2Cfamily-name%2Cgiven-name%2Cidiom%2Cimperative&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=10&maxLength=15&limit=12&api_key=${apiWordKey}`);
         this.passwords = res.data;
         // console.log(this.passwords);
 
@@ -34,6 +34,7 @@ export default class Password {
           }
           if(counter === 3) break;
         }
+        console.log(this.gamePass);
 
         // for(let i = 0; i < this.gamePass.length; i++) {
         //   localStorage.setItem(`gamePass${i}`, this.gamePass[i]);

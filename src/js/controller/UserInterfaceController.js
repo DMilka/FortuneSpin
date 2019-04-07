@@ -9,17 +9,16 @@ export default class UIController {
     this.letterGuessed = 0;
   }
 
-  showConsonants() {
-    UIview.showConsonants(this.UImodel.consonants);
+  createConsonants() {
+    UIview.createConsonants(this.UImodel.consonants);
   }
 
-  showVowel() {
-    UIview.showVowel(this.UImodel.vowel);
+  createVowel() {
+    UIview.createVowel(this.UImodel.vowel);
   }
 
   changeLetters() {
-    elements.vowelBtn.addEventListener('click', UIview.changeLetters);
-    elements.consonantBtn.addEventListener('click', UIview.changeLetters);
+    UIview.changeLetters();
   }
 
   getLetter(passwords) {
@@ -64,7 +63,9 @@ export default class UIController {
     }
     // console.log(isOK);
     if(isOK) {
-      elements.initScreen.classList.remove('hidden');
+      setTimeout(() => {
+        elements.initScreen.classList.remove('hidden');
+      }, 2000);
     }
   }
 
@@ -107,6 +108,43 @@ export default class UIController {
 
   enableSpin() {
     UIview.enableSpin();
+  }
+
+  disableVowels() {
+    UIview.disableVowels();
+  }
+
+  disableConsonants() {
+    UIview.disableConsonants();
+  }
+
+  enableVowels(letters) {
+    UIview.enableVowels(letters);
+  }
+
+  enableConsonants(letters) {
+    UIview.enableConsonants(letters);
+  }
+
+  generateLettersUsedInPassArr(passwords) {
+    return this.UImodel.generateLettersUsedInPassArr(passwords);
+  }
+
+  enablePasswordsCheckForm() {
+
+    UIview.enablePasswordsCheckForm();
+  }
+
+  showConsonants() {
+    UIview.showConsonants();
+  }
+
+  showVowels() {
+    UIview.showVowels();
+  }
+
+  showLettersOnScreen(pass) {
+    UIview.showLettersOnScreen(pass);
   }
 
 

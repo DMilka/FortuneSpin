@@ -41,6 +41,8 @@ main {
     height: calc(50% - 60px);
 }
 
+
+
 .split_screen:first-child {
     margin-right: 0px;
     border-right: 3px solid #000;
@@ -151,6 +153,8 @@ main {
 
 .letters_box__letters {
     margin-top: 20px;
+    width: 60%;
+    margin-left: 20%;
 }
 
 .letters_box__buttons {
@@ -181,7 +185,7 @@ main {
 
 .letters_box {
     text-align: center;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -218,10 +222,6 @@ button:disabled {
     background-color: aliceblue;
 }
 
-.hidden {
-    display: none;
-
-}
 
 .initial {
     width: 100vw;
@@ -270,4 +270,49 @@ button:disabled {
     webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+}
+
+.password form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.password__input {
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    font-size: 1.3rem;
+    font-family: 'Bangers', cursive;
+}
+
+.ready_screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.85);
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ready_screen__btn {
+    width: 300px;
+    height: 100px;
+    background-color: #E5E059;
+    font-size: 2rem;
+    font-family: 'Bangers', cursive;
+    border: none;
+    text-align: center;
+    line-height: 300%;
+}
+
+
+
+.hidden {
+    display:none;
 }
